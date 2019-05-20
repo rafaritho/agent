@@ -1,0 +1,41 @@
+body{
+  width: 100%;
+  max-width: 9000px;
+  margin: center;
+  background: url(imagem.jpg);
+  font-family: 'Indie Flower', cursive;
+  line-height: 1.8;
+  color: black;
+}
+main{
+
+  background: #ff98005c;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+.nome-do-site, .subtitulo {
+  text-align: left;
+  margin: 0;
+}
+.menu ul{
+   margin: 0;
+   background-color: #343a40;
+   list-style: none;
+  }
+  .menu ul li{
+   display: inline;
+
+  }
+  .menu ul li a{
+   padding: 10px 10px;
+   display: inline-block;
+   color: white;
+   text-decoration: none;
+  }
+  .menu ul li a:hover{
+   color: black;
+  }
+.texto {
+  margin-bottom: 10px;
+}
