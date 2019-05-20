@@ -4,6 +4,7 @@
   "description": "Fortnite Tracker",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,13 +14,15 @@
   "author": "rarqs and zeusrevolts",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rafaritho/agent/issues"
+    "url": "https://agent-fortnite.herokuapp.com/"
   },
-  "homepage": "https://github.com/rafaritho/agent#readme",
+  "homepage": "https://agent-fortnite.herokuapp.com/",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
     "express": "^4.16.4",
     "path": "^0.12.7",
     "request": "^2.88.0"
-  }
+  },
+  "keywords": []
 }
