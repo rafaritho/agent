@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 //static -> pasta com html, javascript, imagens
 //public -> pasta usada para o client
 app.use('/public', express.static(path.join(__dirname, 'static')));
-app.use('/scripts', express.static(path.join(__dirname, 'node/bootstrap/dist')))
+app.use('/scripts', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')))
 
 //homepage index.html
 app.get('/', function(req,res){
@@ -26,6 +26,8 @@ app.get('/', function(req,res){
 
 var uri = 'https://api.fortnitetracker.com/v1/profile/';
 var apikey = process.env.APIKEY;
+
+//var apikey = "a768e120-a23b-4880-a2a3-fdbdda42c52a";
 
 //https://api.fortnitetracker.com/v1/profile/{platform}/{epic-nickname}
 //platform = pc, xbl, psn
@@ -36,7 +38,7 @@ app.post('/', function(req,res){
     console.log(req.body);
     request.get(uri + req.body.opcaoPlat + '/' + req.body.campoNickname,{
         headers : {
-            'TRN-Api-Key': apikey           
+            'TRN-Api-Key': 'a768e120-a23b-4880-a2a3-fdbdda42c52a'           
         }}, function (error,response,body){
             console.log(body); 
             res.json(body);
