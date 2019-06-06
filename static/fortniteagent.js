@@ -65,14 +65,13 @@ $(function(){
                     '<p>' + 'Total de Kills: '          + dados.stats.p10.kills.value    + "</p>" +
                     '<p>' + 'Kills por jogo: '          + dados.stats.p10.kpg.value      + '</p>';
 
-        var listaSquad = '<ul class = "list-group">' +
-                  '<li class = "list-group-item text-white bg-dark">' + 'Vitórias: '                + dados.stats.p9.top1.value     + "</li>" +
-                  '<li class = "list-group-item text-white bg-dark">' + 'Porcentagem de Vitórias: ' + dados.stats.p9.winRatio.value + "</li>" +
-                  '<li class = "list-group-item text-white bg-dark">' + 'Rank: '                    + dados.stats.p9.top1.rank      + "</li>" +
-                  '<li class = "list-group-item text-white bg-dark">' + 'K/D: '                     + dados.stats.p9.kd.value     + "</li>" +
-                  '<li class = "list-group-item text-white bg-dark">' + 'Total de Kills: '          + dados.stats.p9.kills.value    + "</li>" +
-                  '<li class = "list-group-item text-white bg-dark">' + 'Kills por jogo: '          + dados.stats.p9.kpg.value      + "</li>" +
-                 '</ul>';  
+        var listaSquad = 
+                  '<p>' + 'Vitórias: '                + dados.stats.p9.top1.value     + "</p>" +
+                  '<p>' + 'Porcentagem de Vitórias: ' + dados.stats.p9.winRatio.value + "</p>" +
+                  '<p>' + 'Rank: '                    + dados.stats.p9.top1.rank      + "</p>" +
+                  '<p>' + 'K/D: '                     + dados.stats.p9.kd.value     + "</p>" +
+                  '<p>' + 'Total de Kills: '          + dados.stats.p9.kills.value    + "</p>" +
+                  '<p>' + 'Kills por jogo: '          + dados.stats.p9.kpg.value      + "</p>";  
 
         var id = 
                         '<ul class = "list-group">' +
@@ -89,12 +88,12 @@ $(function(){
                         '<span>' + listaSolo + '</span>';
                
                 var modelo3 = 
-                        //'<h3>' + 'Solos' + '</h3>' +                         
+                        //'<h3>' + 'Duos' + '</h3>' +                         
                         '<span>' + listaDuos + '</span>';
                 var modelo4 =
-                        '<div class="card text-center text-white bg-dark">' + 
-                        '<h5 class="card-header">' + 'Squad' + '</h5>' + 
-                        '<p class="card-text">' + listaSquad + '</p>' + 
+                        //'<div class="card text-center text-white bg-dark">' + 
+                        //'<h5>' + 'Squad' + '</h5>' + 
+                        '<span>' + listaSquad + '</span>' + 
                 '</div>' + 
                 '</div>';
 
