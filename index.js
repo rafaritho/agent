@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 //static -> pasta com html, javascript, imagens
 //public -> pasta usada para o client
 app.use('/public', express.static(path.join(__dirname, 'static')));
-app.use('/scripts', express.static(path.join(__dirname, 'node/bootstrap/dist')))
+app.use('/scripts', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')))
 
 //homepage index.html
 app.get('/', function(req,res){
