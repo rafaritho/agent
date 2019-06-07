@@ -105,10 +105,18 @@
    position:relative;
    z-index: 1000000;
  }
- p{
+ .content p{
    font-size: 1.15rem;
    color: white;
+   margin-top: -7px;
+   margin-bottom: 20px;
+   position: relative;
+   text-align: left;
  } 
+ p{
+  font-size: 1.15rem;
+  color: white;  
+} 
  label{
    color: white;
    margin-top: 1rem;
