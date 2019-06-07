@@ -149,6 +149,7 @@ transition: 0.5s;
   outline: none; 
   margin-top: 40px; 
   position:relative;
+  z-index: 30; 
 }
 .btn-dark{border:1px solid transparent;padding:.375rem .75rem;font-size:1.15rem;line-height:1.5;border-radius:.25rem;}
 .banner{
