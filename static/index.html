@@ -11,6 +11,7 @@
 
   
     <link rel="stylesheet" href="/scripts/css/bootstrap.min.css" type="text/css">     
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>   
 <body data-spy= "scroll" data-target=".navbar" data-offset="50">
@@ -44,11 +45,19 @@
 </header>
 <div class = "jumbotron jumbotron-fluid height100p banner" id="home">
     <div class="container h100">
-              <div class = "contentBox h100">
+              <div class = "contentbox h100">
                   <div>
-                        <h1 class="nome-do-site"><strong>Fortnite Agent</strong></h1>
-                        <h2 class = "header"><strong>Seja bem vindo!</strong></h2>
-                        <p class = "header">Analise seus stats e ranking do Fortnite</p>   
+                        <h1 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="0" 
+                        data-aos-duration="1000"
+                        class="nome-do-site"><strong>Fortnite Agent</strong></h1>
+                        <h2 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="300" class = "header"><strong>Seja bem vindo!</strong></h2>
+                        <p data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="300" class = "header">Analise seus stats e ranking do Fortnite</p>   
                         <div class = "row2">             
                         <div class = "offset-sm-2 col-sm-8">
                         <a href="#stats" class="btn btnD1">Vamos Lá</a>                    
@@ -67,44 +76,51 @@
                         <p>Digite seu nickname abaixo</p>                       
                                                    
                             <div class="input-group">
-                                <input type="text" id="nickname" class="form-control" aria-label="Text input with segmented dropdown button">
+                                <input type="text" id="nickname" class="form-control">
                                 <div class="input-group-append">
                                     <button type="button" id="pesquisar" class="btn btn-dark">Pesquisar</button>
                                     </button>                  
                                 </div>
                             </div>   
                             <div class = "row">
-                                    <div class = "container" id="resultadoNome"> 
-
+                                    <div class = "container" data-aos="fade-up" data-aos-offset="200"
+                                    data-aos-delay="100" data-aos-duration="1000" id="resultadoNome"> 
                                     </div>
 
-                                    <div class = "col-sm-3.5">
-                                        <div class = "placeBox">
+                                    <div class = "col-sm-4">
+                                        <div class = "box" data-aos="fade-up" data-aos-offset="200"
+                                        data-aos-delay="100" data-aos-duration="1000">
                                             <div class = "imgBx">
                                                     <img src="https://i.imgur.com/HZZecI9.png" class= "img-fluid" alt="Imagem solos">
                                             </div>
-                                            <h3>Solos</h3>  
-                                            <div class = "content" id="resultadoSolo">                                                                                                    
+                                           
+                                            <div class = "content" id="resultadoSolo">       
+                                                <h3>Solo</h3>                                                                                               
                                             </div>                                           
                                         </div>
                                     </div>
-                                    <div class = "col-sm-3.5">
-                                        <div class = "placeBox">
+                                    <div class = "col-sm-4">
+                                        <div class = "box" data-aos="fade-up" data-aos-offset="200"
+                                        data-aos-delay="300" data-aos-duration="1000">
                                             <div class = "imgBx">
                                                     <img src="https://i.imgur.com/vIz3EHx.png" class= "img-fluid" alt="Imagem Duos">
                                             </div>  
-                                            <h3>Duos</h3>   
+                                              
                                             <div class = "content" id="resultadoDuo">
+                                                <h3>Duo</h3>  
                                             </div>                                         
                                         </div>
                                     </div>
-                                    <div class = "col-sm-3.5">
-                                        <div class = "placeBox">
+                                    <div class = "col-sm-4">
+                                        <div class = "box" data-aos="fade-up" data-aos-offset="200"
+                                        data-aos-delay="500" data-aos-duration="1000">
                                             <div class = "imgBx">
                                                     <img src="https://i.imgur.com/roVzTV8.png" class= "img-fluid" alt="Imagem squad">
                                             </div> 
-                                            <h3>Squad</h3>   
-                                            <div class = "content" id="resultadoSquad">      
+                                            
+                                            <div class = "content"> 
+                                                <h3>Squad</h3>  
+                                                <p id="resultadoSquad"></p>  
                                             </div>                                           
                                         </div>
                                     </div>
@@ -120,10 +136,15 @@
                     </div>               
     </section>
     <section class = "sec2" id = "desafios">
-        <div class = "contentBox h100">
+        <div class = "contentbox h100">
             <div>
-                <h1>Desafios Diários</h1>
-                <p>Segue abaixo seus desafios diários</p>               
+                <h1 data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="100" data-aos-duration="1000"
+                > Desafios Diários</h1>
+                <p h1 data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="300">Segue abaixo seus desafios diários</p>               
             </div>
         </div>
 
@@ -134,8 +155,13 @@
             <div class = "row">
                 <div class = "offset-sm-2 col-sm-8">
                     <div class = "headerText text-center">
-                        <h2>Sobre Nós</h2> 
-                        <p>O Fortnite Agent surgiu com o objetivo de difundir informações sobre jogadores de Fortnite
+                        <h2 h1 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="300" data-aos-duration="1000"
+                        >Sobre Nós</h2> 
+                        <p h1 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="500">O Fortnite Agent surgiu com o objetivo de difundir informações sobre jogadores de Fortnite
                             ao redor do mundo. :) 
                         </p>
                     </div>
@@ -191,12 +217,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script tupe = "text/javascript">
+    <script type = "text/javascript">
     $(document).scroll(function(){
         $('.navbar').toggleClass('scrolled', $(this).
         scrollTop() > $('.navbar').height());
     })
     </script>
     <script src="public/fortniteagent.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
