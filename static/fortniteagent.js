@@ -6,6 +6,8 @@ $(function(){
     var resultadoSolo = $('#resultadoSolo');
     var resultadoDuo = $('#resultadoDuo');
     var resultadoSquad = $('#resultadoSquad');
+    var btEnviar = $('#enviar');
+    var mensagemBox = $('#mensagemBox');
     var id = $('id');
     
 
@@ -17,7 +19,7 @@ $(function(){
     btPesquisar.click(function(){
         var dados = {};                    //data
         dados.campoNickname = campoNickname.val().toLowerCase(); 
-        dados.opcaoPlat = opcaoPlat.toLowerCase();  //dropDownValue        
+        dados.opcaoPlat = opcaoPlat.toLowerCase();  //dropDownValue   
         //lowercase = caixa baixa para não dar erros
         //chamada ajax para mandar os dados para o backend
         $.ajax({
@@ -32,6 +34,21 @@ $(function(){
         });
         resetarResultados(); //quando o usuário clicar em pesquisar ele reseta
     });
+
+    btEnviar.click(function(){
+        imprimirMensagem();
+    });
+    function imprimirMensagem(){        
+        var mensagem =    
+                '<div class = "alert">'              
+                '<span class="closebtn" onclick="this.parentElement.style.display=' + 'none' + ';' + '">'
+                'X' + '</span>' +
+                'This is an alert box.' + '</div>';           
+        var modeloMensagem =    
+                '<span>' + mensagem + '</span>';
+
+    mensagemBox.html(modeloMensagem);
+    }
 
     opPlataforma.click(function(){
         opcaoPlat = $(this).text();
@@ -103,12 +120,15 @@ $(function(){
                         
                         '<p class="card-text">' + id + '</p>' + 
                 '</div>' + 
-                '</div>';
+                '</div>';               
+                
+                
 
         resultadoNome.html(modelo);
         resultadoSolo.html(modelo2);
         resultadoDuo.html(modelo3);
         resultadoSquad.html(modelo4);
+        
     }
 
 });
