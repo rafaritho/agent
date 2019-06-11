@@ -38,7 +38,7 @@ app.post('/', function(req,res){
     console.log(req.body);
     request.get(uri + req.body.opcaoPlat + '/' + req.body.campoNickname,{
         headers : {
-            'TRN-Api-Key': 'a768e120-a23b-4880-a2a3-fdbdda42c52a'           
+            'TRN-Api-Key': apikey           
         }}, function (error,response,body){
             console.log(body); 
             res.json(body);
