@@ -9,34 +9,35 @@
     <meta name="descrição" content="">
     <meta name="autor" content="rarqs e zeusrevolts"> 
 
-    <script src="https://kit.fontawesome.com/b80686332d.js"></script>
+  
     <link rel="stylesheet" href="/scripts/css/bootstrap.min.css" type="text/css">     
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>   
-<body>
+<body data-spy= "scroll" data-target=".navbar" data-offset="50">
     <header>
     <nav class="navbar navbar-expand-lg navbar-light 
     bg-light fixed-top">
         <div class = "container">                
-            <a class="navbar-brand" href="#"><strong>Agent</strong></a>
+            <a class="navbar-brand" href="#"><img src="https://logodownload.org/wp-content/uploads/2018/04/fortnite-logo-2.png" class= "logo" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-lg-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="#stats">Stats</a>
                     </li>  
                 <li class="nav-item">
-                    <a class="nav-link" href="#desafios">Desafios diários</a>
+                    <a class="nav-link" href="#sobre">Sobre</a>
                 </li>  
                 <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre Nós</a>
-                    </li>    
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>  
                 </ul>                
             </div>
     </div>
@@ -44,12 +45,20 @@
 </header>
 <div class = "jumbotron jumbotron-fluid height100p banner" id="home">
     <div class="container h100">
-              <div class = "contentBox h100">
+              <div class = "contentbox h100">
                   <div>
-                        <h1 class="nome-do-site"><strong>Fortnite Agent</strong></h1>
-                        <h2 class = "header"><strong>Seja bem vindo!</strong></h2>
-                        <p class = "header">Analise seus stats e ranking do Fortnite</p>   
-                        <div class = "row">             
+                        <h1 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="0" 
+                        data-aos-duration="1000"
+                        class="nome-do-site"><strong>Fortnite Agent</strong></h1>
+                        <h2 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="300" class = "header"><strong>Seja bem vindo!</strong></h2>
+                        <p data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="400" class = "header">Analise seus stats e ranking do Fortnite</p>   
+                        <div class = "row2">             
                         <div class = "offset-sm-2 col-sm-8">
                         <a href="#stats" class="btn btnD1">Vamos Lá</a>                    
                         </div>
@@ -63,115 +72,160 @@
             <div class = "row">
                 <div class="container">
                     <div class = "headerText text-center">
-                        <h2>Stats check</h2>
-                        <p>Digite seu nickname abaixo</p>                       
+                        <h2 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="250" 
+                        data-aos-duration="1000">Stats check</h2>
+                        <p data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="500" 
+                        data-aos-duration="1000">Digite seu nickname abaixo para exibir os resultados</p>                       
                                                    
-                            <div class="input-group">
-                                <input type="text" id="nickname" class="form-control" aria-label="Text input with segmented dropdown button">
+                            <div class ="input-group" data-aos="fade-up"
+                            data-aos-offset="200"
+                            data-aos-delay="400" 
+                            data-aos-duration="1000">
+                                <input type="text" id="nickname" class="form-control">
                                 <div class="input-group-append">
                                     <button type="button" id="pesquisar" class="btn btn-dark">Pesquisar</button>
                                     </button>                  
                                 </div>
                             </div>   
                             <div class = "row">
-                                    <div class = "col-sm-4">
-                                        <div class = "placeBox">
-                                            <div class = "imgBx">
-                                                    <img src="https://gamewith-en.akamaized.net/img/e1d6fef5430fc7e654dda202ffe37a44.jpg" class= "img-fluid" alt="Imagem solos">
-                                            </div>
-                                            <div class = "content" id="resultadoSolo">                                                 
-                                            </div>                                            
-                                        </div>
+                                    <div class = "container" data-aos="fade-up" data-aos-offset="200"
+                                    data-aos-delay="500" data-aos-duration="1000" id="resultadoNome"> 
                                     </div>
-                                    <div class = "col-sm-4">
-                                        <div class = "placeBox">
+
+                                    <div class = "col-sm-3" style="margin-right: 41px">
+                                            <div class = "box" data-aos="flip-up" data-aos-offset="200"
+                                            data-aos-delay="500" data-aos-duration="1000">
+                                                <div class = "imgBx">
+                                                        <img src="https://i.imgur.com/HZZecI9.png" class= "img-fluid" alt="Imagem solos">
+                                                </div>  
+                                                  
+                                                <div class = "content"> 
+                                                        <h3>Solo</h3>  
+                                                        <p id="resultadoSolo"></p>  
+                                                    </div>                                         
+                                            </div>
+                                        </div>                            
+
+                                    <div class = "col-sm-3" style="margin-right: 41px">
+                                        <div class = "box" data-aos="flip-down" data-aos-offset="200"
+                                        data-aos-delay="700" data-aos-duration="1000">
                                             <div class = "imgBx">
-                                                    <img src="https://gamewith-en.akamaized.net/img/7f06c1607d01136525b738f34d78b96b.jpg" class= "img-fluid" alt="Imagem Duos">
-                                            </div>     
-                                            <div class = "content" id="resultadoDuo">                                                 
+                                                    <img src="https://i.imgur.com/vIz3EHx.png" class= "img-fluid" alt="Imagem Duos">
+                                            </div>  
+                                              
+                                            <div class = "content">
+                                                <h3>Duo</h3>
+                                                <p id="resultadoDuo"></p>  
                                             </div>                                         
                                         </div>
                                     </div>
-                                    <div class = "col-sm-4">
-                                        <div class = "placeBox">
+
+                                    <div class = "col-sm-3">
+                                        <div class = "box" data-aos="flip-up" data-aos-offset="200"
+                                        data-aos-delay="900" data-aos-duration="1000">
                                             <div class = "imgBx">
-                                                    <img src="https://gamewith-en.akamaized.net/img/b4dd4922fe55867df0f912450de3cafb.jpg" class= "img-fluid" alt="Imagem squad">
-                                            </div>   
-                                            <div class = "content" id="resultadoSquad">                                                 
-                                            </div>                                           
+                                                    <img src="https://i.imgur.com/roVzTV8.png" class= "img-fluid" alt="Imagem squad">
+                                            </div> 
+                                            
+                                            <div class = "content">
+                                                <h3>Squad</h3>  
+                                                <p id="resultadoSquad"></p>  
+                                            </div> 
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-                    </div>                        
+                            </div>
+                     </div>
+                </div>
+            </div>                        
                                                  
                             <div class="estiloNome">               
                                 <div class="estiloNome" id="resultadoNome"></div>                            
                             </div>                        
                            
                         </div> 
-                    </div>
-                </div>    
-        </div>
-
+                    </div>               
     </section>
-    <section class = "sec2" id = "desafios" style="margin-top: 3em; margin-bottom: 10em">
-        <div class = "contentBox h100">
+    <section class = "sec2" id = "sobre">
+        <div class = "contentbox h100">
             <div>
-                <h1>Desafios Diários</h1>
-                <p>bla bla bla</p>
-                <a href="#" class="btn btnD1">Saiba Mais</a>
+                <h1 data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="100" data-aos-duration="1000"
+                >Sobre o jogo</h1>
+                <div class = "container">
+                <p h1 data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="300">Fortnite é um Battle Royale desenvolvido pela Epic Games que pode ser jogado de graça no PS4, Xbox One, PC, Nintendo Switch e celulares Android e iPhone (iOS). O jogo é considerado um dos maiores sucesso do gênero, e ainda está entre os games online mais jogados atualmente. 
+                O título já está em sua nona temporada e recebe atualizações de conteúdo constantes.  </p>                                
+                <a href="#sobrenos" class="btn btnD1">Saiba mais</a>   
+            </div>
             </div>
         </div>
 
     </section>
 
-    <section class="sobrenos" id="sobre" style="margin-top: 3em; margin-bottom: 10em">
+    <section class="sobrenos" id="sobrenos">
         <div class = "container">
             <div class = "row">
                 <div class = "offset-sm-2 col-sm-8">
-                    <div class = "headerText">
-                        <h2>Test</h2> 
-                        <p> testando estilos</p>
+                    <div class = "headerText text-center">
+                        <h2 h1 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="300" data-aos-duration="1000"
+                        >Sobre Nós</h2> 
+                        <p h1 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="500">O Fortnite Agent surgiu com o objetivo de difundir informações sobre jogadores de Fortnite
+                            ao redor do mundo. Rastreamos todas suas wins, mortes e tops! Com estatísticas atualizadas a cada temporada. 
+                        </p>
                     </div>
                     </div>
             </div>
-
-            </div>
-
-
-    </section>
+            </div>    
+        </section>
 
     <section class = "contact" id = "contato">
         <div class = "container">
             <div class = "row">
                 <div class = "col-sm-12">
                     <div class="headerText">
-                        <h2>Contato</h2>
-                        <p>Caso tenha algum problema bla bkla</p>
+                        <h2 data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="300" 
+                        data-aos-duration="1000">Contato</h2>
+                        <p data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="500" 
+                        data-aos-duration="1000">Problemas ou sugestões</p>
                     </div>
                 </div>
             </div>
             <div class = "row clearfix">
                 <div class = "offset-sm-2 col-sm-8">
-                    <form>
-                        <div class = "form-group">
-                            <label>Name</label>
-                            <input type = "text" name = "" class = 
-                            "form-control">
+                    <form action="https://formspree.io/contato.fortnite.agent@gmail.com" method="POST">
+                        <div class = "form-group" data-aos="flip-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000">
+                            <label data-aos="fade-left" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000">
+                                Nome</label>
+                            <input type = "text" name = "nome" class = "form-control">
                         </div>
-                        <div class = "form-group">
-                                <label>Email</label>
-                                <input type = "text" name = "" class = 
-                                "form-control">
+                        <div class = "form-group" data-aos="flip-down" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000">
+                            <label data-aos= "fade-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1000">
+                                Email</label>
+                            <input type = "text" name = "replyto" class = "form-control">
                             </div>
+                        <div class = "form-group" data-aos="flip-down" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000">
+                            <label data-aos="fade-left" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1000">
+                                Mensagem</label>
+                            <textarea class = "form-control textarea" name="mensagem"> </textarea>
+                            </div> 
                         <div class = "form-group">
-                                    <label>Message</label>
-                                    <textarea class = "form-control textarea"> </textarea>
-                                </div> 
-                        <div class = "form-group">
-                        <button class = "btn btnD1">Send</button> 
-                        </div>        
+                        <button type="submit" value = "send" class="btn btnD1">Enviar</button> 
+                        </div>                                
                     </form>
                 </div>
 
@@ -180,23 +234,25 @@
     </section>
     
 <footer>
-        <p class="cpryt">Copyright 2019 Fortnite Agent |  
+        <p class="cpryt">© Copyright 2019 Fortnite Agent |  
                 Feito por: <a href="#"> RarkS e ZeusRevoLTs </a>
         </p>
-
-</footer>      
-            
-           
+</footer> 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script tupe = "text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script type = "text/javascript">
     $(document).scroll(function(){
         $('.navbar').toggleClass('scrolled', $(this).
         scrollTop() > $('.navbar').height());
     })
     </script>
     <script src="public/fortniteagent.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
