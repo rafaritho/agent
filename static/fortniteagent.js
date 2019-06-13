@@ -85,4 +85,5 @@ $(function(){
         resultadoDuo.html(ModeloDuo);
         resultadoSquad.html(ModeloSquad);        
     }
+
 });
