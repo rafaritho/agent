@@ -9,7 +9,6 @@ express()
   .use('/public', express.static(path.join(__dirname, 'static')))
   .set('static', path.join(__dirname, 'static'))
   .get('/', (req, res) => res.render('/static/index.html'))
-  //.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 //iniciamento do bodyparse (comandos do express para usar o path)
 app.use(bodyParser.json());
@@ -25,14 +24,10 @@ app.get('/', function(req,res){
 });
 
 var uri = 'https://api.fortnitetracker.com/v1/profile/';
-var uri2 = 'https://api.fortnitetracker.com/v1/store';
 var apikey = process.env.APIKEY;
-
-//var apikey = "a768e120-a23b-4880-a2a3-fdbdda42c52a";
 
 //https://api.fortnitetracker.com/v1/profile/{platform}/{epic-nickname}
 //platform = pc, xbl, psn
-//TRN-Api-Key: a768e120-a23b-4880-a2a3-fdbdda42c52a
 
 //post para jQuery postar a informação sobre o usuário (API)
 app.post('/', function(req,res){
@@ -40,26 +35,12 @@ app.post('/', function(req,res){
     request.get(uri + req.body.opcaoPlat + '/' + req.body.campoNickname,
     {
         headers : {
-            'TRN-Api-Key': 'a768e120-a23b-4880-a2a3-fdbdda42c52a'           
+            'TRN-Api-Key': apikey           
         }}, function (error,response,body){
             console.log(body); 
             res.json(body);
             //manda os dados de volta para o body para o user ver         
     });
-}); 
-/*
-app.post('/', function(req,res){
-    console.log(req.body);
-    request.get(uri2,
-    {
-        headers : {
-            'TRN-Api-Key': 'a768e120-a23b-4880-a2a3-fdbdda42c52a'           
-        }}, function (error,response,body){
-            console.log(body); 
-            res.json(body);
-            //manda os dados de volta para o body para o user ver         
-    });
-}); */
-
+});
 var port = process.env.PORT || 5000; //port de um servidor externo
 app.listen(port);
