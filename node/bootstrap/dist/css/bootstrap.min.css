@@ -16,9 +16,7 @@
    align-items:center;
    width: 100%;
    max-width: auto;
-   margin: auto;   
-   background-position: center top;
-   background-attachment: fixed;   
+   margin: auto;     
    line-height: 1.8;
    color: black;
  }
@@ -73,8 +71,9 @@
   .row{
     background-color: transparent;    
     text-align: center;
+    position: relative;
   }  
-  .row2{
+   .row2{
     background-color: transparent;    
     text-align: center;
     margin-top: 20px;
@@ -234,6 +233,7 @@ transition: 0.5s;
    height:100vh;
    background-image: url(https://i.imgur.com/E4aimwL.jpg);
    background-size: cover;
+   background-position: center top; 
    margin-bottom: 0;
 }
 .banner:before,
@@ -349,6 +349,7 @@ text-align: center;
 .sec2{
   position: relative;
   background: url(https://i.imgur.com/cqkieWp.png);
+  background-position: center top; 
   background-size: cover; 
   height: 100vh;
 }
