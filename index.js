@@ -25,6 +25,7 @@ app.get('/', function(req,res){
 });
 
 var uri = 'https://api.fortnitetracker.com/v1/profile/';
+var uri2 = 'https://api.fortnitetracker.com/v1/store';
 var apikey = process.env.APIKEY;
 
 //var apikey = "a768e120-a23b-4880-a2a3-fdbdda42c52a";
@@ -36,16 +37,29 @@ var apikey = process.env.APIKEY;
 //post para jQuery postar a informação sobre o usuário (API)
 app.post('/', function(req,res){
     console.log(req.body);
-    request.get(uri + req.body.opcaoPlat + '/' + req.body.campoNickname,{
+    request.get(uri + req.body.opcaoPlat + '/' + req.body.campoNickname,
+    {
         headers : {
-            'TRN-Api-Key': apikey           
+            'TRN-Api-Key': 'a768e120-a23b-4880-a2a3-fdbdda42c52a'           
         }}, function (error,response,body){
             console.log(body); 
             res.json(body);
             //manda os dados de volta para o body para o user ver         
     });
 }); 
+/*
+app.post('/', function(req,res){
+    console.log(req.body);
+    request.get(uri2,
+    {
+        headers : {
+            'TRN-Api-Key': 'a768e120-a23b-4880-a2a3-fdbdda42c52a'           
+        }}, function (error,response,body){
+            console.log(body); 
+            res.json(body);
+            //manda os dados de volta para o body para o user ver         
+    });
+}); */
 
 var port = process.env.PORT || 5000; //port de um servidor externo
 app.listen(port);
-//app.listen(PORT, () => console.log(`Listening on ${ PORT }`))

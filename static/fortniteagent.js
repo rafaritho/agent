@@ -5,6 +5,7 @@ $(function(){
     var resultadoSolo = $('#resultadoSolo');
     var resultadoDuo = $('#resultadoDuo');
     var resultadoSquad = $('#resultadoSquad'); 
+    var resultadoLifetime = $('#resultadoLifetime');
 
     //valores padrões
     var opcaoPlat = 'pc';
@@ -14,7 +15,7 @@ $(function(){
     btPesquisar.click(function(){
         var dados = {};                    //data
         dados.campoNickname = campoNickname.val().toLowerCase(); 
-        dados.opcaoPlat = opcaoPlat.toLowerCase();  //dropDownValue   
+        dados.opcaoPlat = opcaoPlat.toLowerCase(); 
         //lowercase = caixa baixa para não dar erros
         //chamada ajax para mandar os dados para o backend
         $.ajax({
@@ -36,6 +37,7 @@ $(function(){
         resultadoSolo.html('');
         resultadoDuo.html('');
         resultadoSquad.html('');
+        resultadoLifetime.html('');
     }
 
     function mostrarDados(dados){
@@ -65,28 +67,36 @@ $(function(){
                   '<p>' + 'Total de Kills: '          + dados.stats.p9.kills.value    + "</p>" +
                   '<p>' + 'Kills por jogo: '          + dados.stats.p9.kpg.value      + "</p>";  
 
-                var ModeloNome =    
+        /*var listaLifetime =
+                '<p>' + dados.stats.lifeTimeStats.key  + "</p>" +  
+                '<p>' + dados.stats.lifeTimeStats.value  + "</p>"; */
+
+        var ModeloNome =    
                         '<h1 class data-aos="fade-left' + 
                         'data-aos-offset="200" data-aos-delay="100" data-aos-duration="500">'+
                         '<strong>' + epicUserHandle + '</strong></h1>' +      
                     '</div>';   
 
-                var ModeloSolo =                         
+        var ModeloSolo =                         
                         '<span>' + listaSolo + '</span>';               
-                var ModeloDuo =                                           
+        var ModeloDuo =                                           
                         '<span>' + listaDuos + '</span>';
-                var ModeloSquad =
+        var ModeloSquad =
                         '<span>' + listaSquad + '</span>' + 
                 '</div>' + 
                 '</div>';
 
-                var ModeloNone = 
-                '<span>' + '<Digite um nick para obter resultados>' + '</span>';
+        /*var ModeloLifetime = '<span>' + listaLifetime + '</span>' + 
+        '</div>' + 
+        '</div>';
+*/
+
 
         resultadoNome.html(ModeloNome);
         resultadoSolo.html(ModeloSolo);
         resultadoDuo.html(ModeloDuo);
-        resultadoSquad.html(ModeloSquad);        
+        resultadoSquad.html(ModeloSquad);   
+        //resultadoLifetime.html(ModeloLifetime);       
     }
 
 });
